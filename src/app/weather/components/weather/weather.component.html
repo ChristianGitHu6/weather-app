@@ -1,0 +1,35 @@
+<div class="weather-container">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search country</mat-label>
+    <input
+      matInput
+      [matAutocomplete]="auto"
+      [(ngModel)]="searchKey"
+      (ngModelChange)="onInputChange()">
+
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      class="group-search-result-autocomplete">
+      <mat-option (onSelectionChange)="selectCountry(location)"
+                  *ngFor="let location of autoCompleteLocations | async" [value]="location.name">
+        <div class="search-result-group">{{location.name}}</div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+
+  <div class="weather-info-container" *ngIf="weather$ | async; let weather">
+    <div class="location">{{weather.location.name}}</div>
+    <div class="temperature">{{weather.current.temp_c}} C</div>
+    <div class="condition">{{weather.current.condition.text}}</div>
+    <img [src]="weather.current.condition.icon" alt="Weather Icon" class="icon">
+    <div class="details">
+      <div>Wind: {{weather.current.wind_mph}} mph S</div>
+      <div>Pressure: {{weather.current.pressure_mb}} mb</div>
+      <div>Humidity: {{weather.current.humidity}}%</div>
+      <div>Visibility: {{weather.current.vis_km}} km</div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
