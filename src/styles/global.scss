@@ -1,0 +1,48 @@
+:root {
+  --g-color1: #222222;  // black
+  --g-color2: #3A394C;  // neutral--90
+  --g-color3: #50505E;  // neutral--80
+  --g-color4: #6C6C78;  // neutral--70
+  --g-color5: #838391;  // neutral--60
+  --g-color6: #BEBEC5;  // neutral--40
+  --g-color7: #D9D9DD;  // neutral--30
+  --g-color8: #E9E9ED;  // neutral--20
+  --g-color9: #F2F2F3;  // neutral--10
+  --g-color10: #FFFFFF; // white
+  --g-color11: #3B126F; // primary
+  --g-color12: #E6DEF0; // primary--light
+  --g-color13: #373677; // interactive
+  --g-color14: #E7EAF6; // interactive--light
+  --g-color15: #F6F7FB; // interactive-very--light
+  --g-color16: #3B9012; // positive
+  --g-color17: #D9EDD7; // positive--light
+  --g-color18: #D9AF1C; // highlight
+  --g-color19: #F6F7DD; // highlight--light
+  --g-color20: #7D260B; // warning
+  --g-color21: #FFE2C7; // warning--light
+  --g-color22: #FFEB7B; // admin--light
+  --g-color23: #231A37; // admin--dark
+  --g-color24: #08583B; // positive--dark
+  --g-color25: #ff0000; // error
+  --theme-primary-color: #5A27E7; // potentially primary
+  --theme-primary-light-color: #DDD7F5; // potentially primary light
+
+  --potentially-button-bg: var(--theme-primary-color);
+  --primary-button-bg: var(--g-color11);
+  --primary-button-hover-bg: var(--g-color12);
+  --primary-button-color: var(--g-color10);
+  --primary-button-hover-color: var(--g-color11);
+  --secondary-button-bg: var(--g-color10);
+  --secondary-button-hover-bg: var(--g-color6);
+  --secondary-button-color: var(--g-color1);
+  --secondary-button-hover-color: var(--g-color1);
+  --tertiary-button-bg: var(--g-color7);
+  --tertiary-button-hover-bg: var(--g-color6);
+  --tertiary-button-color: var(--g-color1);
+  --tertiary-button-hover-color: var(--g-color1);
+  --positive-button-color: var(--g-color10);
+  --positive-button-bg: var(--g-color16);
+  --positive-button-hover-color: var(--g-color16);
+  --positive-button-hover-bg: var(--g-color16);
+}
+

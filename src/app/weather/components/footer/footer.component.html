@@ -1,0 +1,9 @@
+<div class="footer-container">
+  <mat-form-field>
+    <mat-label>{{selected}}</mat-label>
+    <mat-select panelClass="custom-select" [(value)]="selected">
+      <mat-option (click)="onOptionSelect(language)" *ngFor="let language of availableLanguages"
+                  [value]="language">{{language}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
