@@ -1,5 +1,5 @@
 <div class="weather-container">
-  <mat-form-field class="example-full-width">
+  <mat-form-field>
     <mat-label>Search country</mat-label>
     <input
       matInput
@@ -8,11 +8,10 @@
       (ngModelChange)="onInputChange()">
 
     <mat-autocomplete
-      #auto="matAutocomplete"
-      class="group-search-result-autocomplete">
+      #auto="matAutocomplete">
       <mat-option (onSelectionChange)="selectCountry(location)"
                   *ngFor="let location of autoCompleteLocations | async" [value]="location.name">
-        <div class="search-result-group">{{location.name}}</div>
+        <div>{{location.name}}</div>
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>

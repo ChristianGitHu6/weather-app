@@ -1,8 +1,8 @@
-import {Injectable} from "@angular/core";
+import {Inject, Injectable} from "@angular/core";
 import {Action, Actions, Selector, State, StateContext} from "@ngxs/store";
 import {defaultLoadableState, LoadableState, Location, WeatherModel} from "../models/weather.model";
 import * as WeatherActions from './weather.action';
-import {WeatherService} from "../services/weather.service";
+import {WEATHER_SERVICE, WeatherService} from "../services/weather.service";
 
 
 interface WeatherStateModel {
@@ -32,7 +32,7 @@ export class WeatherState {
     return autoCompleteSearchLocations;
   }
 
-  constructor(private weatherService: WeatherService) {
+  constructor(@Inject(WEATHER_SERVICE) private weatherService: WeatherService) {
   }
 
   @Action(WeatherActions.SearchCountry)
